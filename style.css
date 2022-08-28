@@ -1,0 +1,218 @@
+/**
+* You can edit this whole file.
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --gray-0: #000000;
+  --gray-1: #222222;
+  --gray-2: #dddddd;
+  --gray-3: #fbfbfb;
+  --gray-4: #ffffff;
+  --primary: #8a2be2;
+  --secondary: #20d397;
+  --font-size-1: 1.5rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1rem;
+  --font-weight-thin: 300;
+  --font-weight-bold: 600;
+  --font-weight-heavy: 800;
+  --spacer-1: .25rem;
+  --spacer-2: .5rem;
+  --spacer-3: 1rem;
+  --spacer-4: 1.5rem;
+  --spacer-5: 2rem;
+  --shadows: 7px 7px 7px rgba(0, 0, 0, .15);
+}
+
+html {
+  line-height: 1.44;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/*Navbar styles*/
+.nav-bar-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--secondary);
+}
+
+.nav-bar-page ul li a:hover {
+  border-bottom: 2px solid var(--gray-4);
+  padding-bottom: var(--spacer-1);
+}
+
+.container-content-nav {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.image-section {
+  display: inline-flex;
+  text-align: center;
+}
+
+.img-logo {
+  height: 30px;
+  width: 30px;
+  margin: 8px 15px 5px 0;
+}
+
+.title-page {
+  color: var(--gray-0);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-heavy);
+}
+
+.image-section .title-page {
+  margin: 12px 0px 12px 0;
+  color: var(--gray-4);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 12px 0;
+}
+
+.nav-links > ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links > ul > li {
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  display: inline;
+  padding: var(--spacer-3);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-heavy);
+}
+
+.nav-links > ul > li > a {
+  text-decoration: none;
+  color: var(--gray-4);
+}
+
+/*content styles*/
+.content-section {
+  display: flex; 
+  width: 70%;
+  flex-direction: column;
+  margin: auto;
+}
+
+.pets-title {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-bold);
+  margin: 20px 0px 20px 0px;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacer-3);
+  border: 0.5px solid var(--gray-2);
+  box-shadow: var(--shadows);
+}
+
+.marg-r {
+  margin-right: var(--spacer-5);
+}
+
+.card > h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--gray-0);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-bold);
+}
+
+.card > p {
+  color: var(--gray-1);
+  padding: var(--spacer-2);
+  font-size: var(--font-size-3);
+}
+
+.card > a {
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 60px;
+  color: var(--gray-4);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-bold);
+  background: var(--primary);
+  margin-top: var(--spacer-3);
+
+}
+
+.card > a .img-paw {
+  width: 15px;
+  height: 15px;
+  margin-right: var(--spacer-2);
+}
+
+/*Reponsive section - media queries*/
+@media (max-width: 960px) {
+  .container-content-nav {
+    width: 90%;
+  }
+
+  .content-section {
+    width: 90%;
+  }
+
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 25px;
+  }
+
+  .card p {
+    margin: 8px 0 8px 0;
+  }
+
+  .card a .img-paw {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container-content-nav {
+    width: 90%;
+  }
+  
+  .content-section {
+    width: 90%;
+  }
+}
+
